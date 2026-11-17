@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: d801f92e-3f62-4d7a-a281-9b19e248a801
+      author: daniel2004-lsd
+      logicalFilePath: 01_ddl/00_extensions/001_enable_uuid_extension.sql
+      labels: "ddl,extensions,uuid"
+      comment: Enables the uuid-ossp extension for UUID generation.
+      changes:
+        - sqlFile:
+            path: 001_enable_uuid_extension.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/00_extensions/001_enable_uuid_extension.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false

@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: a1100001-0001-4000-8000-000000000001
+      author: daniel2004-lsd
+      logicalFilePath: 01_ddl/03_tables/001_tenant_module/001_create_table_organizations.sql
+      labels: "ddl,tables,tenant,organizations"
+      comment: Creates the tenant organizations table.
+      changes:
+        - sqlFile:
+            path: 001_create_table_organizations.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/001_tenant_module/001_create_table_organizations.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: a1100001-0001-4000-8000-000000000002
+      author: daniel2004-lsd
+      logicalFilePath: 01_ddl/03_tables/001_tenant_module/002_create_table_memberships.sql
+      labels: "ddl,tables,tenant,memberships"
+      comment: Creates the tenant memberships table.
+      changes:
+        - sqlFile:
+            path: 002_create_table_memberships.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/001_tenant_module/002_create_table_memberships.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
+
+  - changeSet:
+      id: a1100001-0001-4000-8000-000000000003
+      author: daniel2004-lsd
+      logicalFilePath: 01_ddl/03_tables/001_tenant_module/003_create_table_outbox_events.sql
+      labels: "ddl,tables,tenant,outbox"
+      comment: Creates the transactional outbox_events table.
+      changes:
+        - sqlFile:
+            path: 003_create_table_outbox_events.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../../05_rollbacks/01_ddl/03_tables/001_tenant_module/003_create_table_outbox_events.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false

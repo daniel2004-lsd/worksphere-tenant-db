@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: c3300001-0001-4000-8000-000000000001
+      author: daniel2004-lsd
+      logicalFilePath: 03_dcl/02_policies/001_organizations_rls.sql
+      labels: "dcl,policies,rls,security"
+      comment: Enables Row-Level Security policies on tenant tables.
+      changes:
+        - sqlFile:
+            path: 001_organizations_rls.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/03_dcl/02_policies/001_organizations_rls.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false

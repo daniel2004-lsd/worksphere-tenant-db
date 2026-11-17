@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - include:
+      file: 00_extensions/changelog.yaml
+      relativeToChangelogFile: true
+
+  - include:
+      file: 03_tables/changelog.yaml
+      relativeToChangelogFile: true

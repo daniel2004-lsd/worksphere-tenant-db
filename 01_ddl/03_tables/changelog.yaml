@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: 001_tenant_module/changelog.yaml
+      relativeToChangelogFile: true

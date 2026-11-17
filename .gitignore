@@ -1,0 +1,46 @@
+# ==============================================================================
+# WorkSphere — Database Repository .gitignore
+# Strict Security, Secret Hygiene & Tooling Exclusion
+# ==============================================================================
+
+# 1. Local AI Agent Harnesses & SDD Working Directories (STRICTLY LOCAL)
+.specify/
+.codex/
+.claude/
+.antigravity/
+.gemini/
+
+# 2. Environment Variables & Secret Files (ZERO SECRETS IN GIT)
+*.env
+*.env.*
+!*.env.example
+*.pem
+*.key
+*.pkcs12
+*.pfx
+*.jks
+id_rsa
+id_ed25519
+*.token
+credentials.json
+secrets.yaml
+liquibase.properties
+!liquibase.properties.example
+
+# 3. Operating System & Editor Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# 4. Logs and Temporary Files
+*.log
+tmp/
+temp/
+lib/*.jar
+!lib/.gitkeep

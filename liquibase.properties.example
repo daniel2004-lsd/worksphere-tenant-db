@@ -1,0 +1,12 @@
+# ==============================================================================
+# WorkSphere Tenant Database Migration Properties (Template)
+# Copy this file to liquibase.properties (DO NOT COMMIT liquibase.properties)
+# ==============================================================================
+
+changeLogFile=changelog/db.changelog-master.yaml
+searchPath=.
+
+url=jdbc:postgresql://localhost:5432/tenant_db
+username=worksphere_admin
+password=worksphere_secret_password
+driver=org.postgresql.Driver
